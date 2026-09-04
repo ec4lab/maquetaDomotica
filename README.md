@@ -48,3 +48,10 @@ Puedes ver los diseños [aquí](<https://cad.onshape.com/documents/d6a8f2f76ae76
 ### Tormenta de ideas
 
 Implementación de protocolos.
+
+### Proximos pasos
+1- Control de luces.  
+Debe admitir 6 entradas y 6 salidas. 
+
+2- Control W-LED para sala Multimedia.  
+Diferentes escenas.

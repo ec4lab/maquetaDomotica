@@ -1,0 +1,1 @@
+# Control de 6 luces.
