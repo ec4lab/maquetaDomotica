@@ -62,7 +62,7 @@ Se configuran 8 opciones de entrada para gestionar el control manual. En tres de
 * **GPIO 39 (VN)** -> Entrada Digital Convencional (Requiere Pull-Up externa) `[OK]`
 
 ### 💡 Asignación de Salidas (Control de Relés)
-Lista de pines disponibles y validados para enviar la señal de activación hacia el módulo de 6 relés que conmutará la potencia de las luces:
+Lista de pines disponibles y validospara enviar la señal de activación:
 
 * **GPIO 16** -> Salida Actuador `[OK]`
 * **GPIO 17** -> Salida Actuador `[OK]`
