@@ -1,0 +1,100 @@
+# Datos del Proyecto
+# Version 1.0 03/11/2023
+# Este ejemplo explora algunas posibilidades de sensores y actuadores.
+
+
+#################################################################################
+#			CONFIGURACIÓN GENERAL DEL DISPOSITIVO			#
+#################################################################################
+
+
+# Información del dispositivo y la placa.
+substitutions:
+  name: "sv_desarrollo_multisensor"
+  friendly_name: Desarrollo Multisensor
+
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+  min_version: 2024.6.0
+  name_add_mac_suffix: false
+
+esp8266:
+  board: d1_mini
+
+# Activar los regitros del dispostivo.
+logger:
+
+# Activar API Home Assistant (cominicación con el servidor)
+api:
+  encryption:
+    key: !secret sv_desarrollo_multisensor_api_key
+
+# Activar la actualización de firmware por OTA
+ota:
+  password: !secret sv_desarrollo_multisensor_ota_pasword"
+
+# En caso de no encontrar Red WIFI se activa una red de configuración
+captive_portal:
+
+# Información de las redes WIFI a las que se puede conectar
+wifi:
+  networks:
+  # Red Principal
+  - ssid: !secret wifi_EI_ssid
+    password: !secret wifi_EI_password
+  
+  # Red Secundaria, es sposible agregar más
+  - ssid: !secret wifi_ssid
+    password: !secret wifi_password
+  
+  # SSID y Pass del captive portal
+  ap:
+    ssid: "Desarrollo Multisensor"
+    
+
+# Servidor web para ver estado del dispositivo y los registros
+web_server:
+  port: 80
+  # version: 2
+
+
+#########################################################################################
+#			CONFIGURACIÓN ESPECIFICA DEL DISPOSITIVO			#
+#########################################################################################
+
+# Sensores.
+sensor:
+  # Sensor de temperatura y Humedad
+  - platform: dht
+    pin: D1                   	# Pin al que está conectado
+    model: DHT11
+    temperature:
+      name: "Temperatura"
+    humidity:
+      name: "Humedad"
+    update_interval: 10s      	# para el ejemplo 10s asi lo vemos cambiar, uso real 60/120s
+
+  # Sensor de medida analogica (Sensores DIY)
+  - platform: adc
+    pin: A0                   	# Entrada analógica del WEMOS   
+    name: Sensor Analogico
+    id: sensoranalogico
+    accuracy_decimals: 4
+    filters:
+      - multiply: 3.3		# Ajustar de acuerdo a la variable a medir 0V=0%, 3,3V=100%
+    update_interval: 10s	# para el ejemplo 10s asi lo vemos cambiar, uso real 60/120s
+
+# Salidas para control digital (ON/OFF)
+switch:
+  - platform: gpio
+    pin: D2                  # Pin al que está conectado
+    name: "Luz WEMOS"
+
+# Lectura de un pin digital (ej: Llave/Pulsador/SeñalDigital)
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: D3            # Pin al que está conectado
+      inverted: true        # internamente Pull Up, invertimos para activar con Low
+    name: "Pulsador Wemos"

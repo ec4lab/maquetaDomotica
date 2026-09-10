@@ -1,0 +1,3 @@
+ID,Ubicacion,Tipo,Nombre,Tecnologia,Hardware,Estado
+DEV-PB-LIV-001,PB_LIVING,Sensor,Sensor ambiental,ESPHome,ESP32-C3+BME280,ACTIVO
+DEV-PB-GAR-002,PB_GARAGE,Actuador,Luz garage,ESPHome,ESP32+Relay,ACTIVO
