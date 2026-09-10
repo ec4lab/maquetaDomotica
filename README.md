@@ -1,25 +1,62 @@
-# Domotica
+# Maqueta Domótica
+
 Maqueta educativa con servidor domótico.
 
-<p align="center">
-<img src="imagenes/maqueta.png" alt="System Monitor" width="600" border="none"/
-<figcaption align="center"; style="margin-top: 10px; font-size: 14px; color: #555;">
-    Maqueta de domótica
-</figcaption>
-</p>
+## Estructura de carpetas
 
-El servidor:
+```text
+/maquetaDomotica
+├── docs/
+│   ├── Todo lo referido a documentación y procedimientos
+│   └── README.md
+├── dispositivos/
+│   ├── sv_template_multisensor # ejemplo y guía para los siguientes
+│   └── Demás dispositivos creados y el Paso a paso
+└── dev/
+    └── Carpetas de alumnos durante el desarrollo
+```
 
-<p align="center">
-<img src="imagenes/server.png" alt="System Monitor" width="600" border="none"/>
-<figcaption align="center"; style="margin-top: 10px; font-size: 14px; color: #555;">
-    Servidor
-</figcaption>
-</p>
+## Línea de Tiempo
 
-Puedes ver los diseños [aquí](<https://cad.onshape.com/documents/d6a8f2f76ae76a8239c98e7f/w/7032777c43a338df95c8073c/e/f056e302fcba7e00805ea264?renderMode=0&uiState=6a99ceef9c58c87a6aed63fd>)
+1. Maqueta - Construcción y definición de las plantas y áreas
+2. Servidor - Configurar Router
+3. Servidor - Construcción del soporte e instalación.
+4. Servidor - Ajustes básicos y definir IP estática
+5. Servidor - Configurar Personas
+6. Servidor - Instalar File Editor
+7. Servidor - Instalar Tailscale
+8. Servidor - Instalar EspHome Device Builder
+9. documentación - Política de nombres
+10. dispositivos - sv-template-multisensor: guía base y pruebas
+11. documentación - Tabla Dispositivos /IP
+12. dispositivos - Ficha
 
-## ToDo List
+### Próximamente
+
+Protocolos
+Automatizaciones
+Pruebas
+Incidentes
+
+usuarios  
+backups  
+actualización  
+seguridad  
+estructura de áreas  
+integración  
+naming  
+dashboard base  
+dashboards adicionales
+
+Zigbee
+Bluetooth/BLE
+ESP-NOW
+LoRa
+Protocolos industriales (Modbus / OPCua)
+KNX
+BACnet
+MQTT
+Matter
 
 ### La Maqueta / Servidor
 
@@ -32,7 +69,7 @@ Puedes ver los diseños [aquí](<https://cad.onshape.com/documents/d6a8f2f76ae76
   * En una mini PC
   * Versión contenedor
 * Acceso Remoto con Tailscale
-* Definir espacios habitables
+
 
 ### Los dispositivos
 

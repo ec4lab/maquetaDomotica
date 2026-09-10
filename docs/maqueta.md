@@ -173,3 +173,55 @@ Aquí los nombres son un poco menos intuitivos, en línea con la regla generar s
 * Los guiones `-` se usan en nombres de dispositivos, el uso de bajo guiones `_`puede generar problemas con los DNS, pero para id's de entidades son mandatorios, no se permite el uso de guiones.
 
 https://esphome.io/guides/faq/
+
+## Ficha técnica dispositivos
+
+```text
+Fecha:
+2026-09-XX
+Alumno:
+XXXX
+
+Estado:
+ACTIVO
+
+ID: DEV-PB-LIV-001
+Nombre: Sensor ambiental Living
+
+Ubicación: PB / Living
+
+Descripción:
+Medir temperatura y humedad.
+
+Hardware:
+ESP32-C3
+BME280
+
+Tecnología:
+ESPHome
+
+Comunicación:
+Wi-Fi
+
+Alimentación:
+5 VDC
+
+Entidades:
+- temperatura
+- humedad
+- presión
+
+Esquema eléctrico
+
+Foto
+
+codigo.yaml
+
+Automatizaciones en las que participa.
+```
+
+Documentación de instalación
+Documentación de configuración
+Pruebas realizadas
+Problemas encontrados
+Solución aplicada
