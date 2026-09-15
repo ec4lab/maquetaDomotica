@@ -225,3 +225,17 @@ Documentación de configuración
 Pruebas realizadas
 Problemas encontrados
 Solución aplicada
+
+
+## La Maqueta / Servidor
+
+* [Construir la maqueta](link)
+* Instalar Servidor
+  * En Raspberry
+  * En Máquina Virtual
+    * En Virtual Box
+    * en VMWare
+  * En una mini PC
+  * Versión contenedor
+* Acceso Remoto con Tailscale
+
