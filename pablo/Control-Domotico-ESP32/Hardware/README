@@ -1,0 +1,50 @@
+
+## 🛠️ 4. Diseño electrónico en KiCad
+
+Para construir el módulo de domótica se diseñó una placa de circuito impreso utilizando **KiCad**, una herramienta de diseño electrónico que permite desarrollar tanto el esquemático como el PCB.
+
+### 4.1. Diseño del esquemático
+
+En primer lugar, se realizó el esquemático del circuito para representar las conexiones eléctricas entre el ESP32, las teclas, las resistencias, los transistores y las luces.
+
+El diseño contempla:
+
+- Las conexiones de las seis entradas digitales para las teclas.
+- Las resistencias pull-down de 10 kΩ para establecer el nivel lógico de las entradas.
+- Las seis salidas digitales destinadas al control de los transistores 2N2222A.
+- Las resistencias de base de los transistores.
+- La distribución de alimentación de 5 V y las conexiones de GND.
+- Las borneras para facilitar la conexión externa de los distintos elementos del circuito.
+
+El esquemático permite verificar las conexiones antes de trasladarlas a la placa física.
+
+### 4.2. Diseño de la placa PCB
+
+Una vez finalizado el esquemático, se desarrolló el diseño de la placa de circuito impreso (PCB) en KiCad.
+
+En esta etapa se definieron la ubicación de los componentes, las pistas de cobre y las borneras necesarias para conectar el ESP32 con los circuitos externos.
+
+El uso de borneras permite conectar y desconectar las teclas, las luces y la alimentación sin tener que soldar directamente cada cable a la placa. Esto facilita el montaje, las pruebas y el mantenimiento del sistema.
+
+También se debe respetar la separación entre las pistas y dimensionar su ancho de acuerdo con las corrientes que circulan por ellas, especialmente en las líneas de alimentación de las luces.
+
+### 4.3. Fabricación mediante grabado químico
+
+Para fabricar la PCB se utilizará la técnica de **grabado químico con ácido**. Este procedimiento permite obtener las pistas conductoras sobre una placa revestida de cobre, eliminando el cobre de las zonas que no forman parte del circuito.
+
+El proceso de fabricación comprende las siguientes etapas:
+
+1. **Preparación del diseño:** revisar el PCB en KiCad y generar el patrón de las pistas para transferirlo a la placa.
+2. **Preparación de la placa:** limpiar la superficie de cobre para facilitar la transferencia del diseño.
+3. **Transferencia del patrón:** aplicar el diseño de las pistas sobre la placa utilizando un método de transferencia adecuado.
+4. **Grabado químico:** eliminar el cobre expuesto mediante un producto de grabado apropiado, siguiendo las instrucciones de seguridad del fabricante.
+5. **Limpieza y revisión:** retirar los residuos del proceso y comprobar que las pistas hayan quedado correctamente definidas, sin cortes ni cortocircuitos.
+6. **Perforado y montaje:** realizar los orificios necesarios, soldar los componentes y colocar las borneras.
+7. **Verificación eléctrica:** comprobar la continuidad de las pistas y la ausencia de cortocircuitos antes de conectar la alimentación y el ESP32.
+
+Durante el grabado se deben utilizar los elementos de protección adecuados y trabajar en un lugar apropiado. El producto químico utilizado y sus residuos deben manipularse y desecharse según sus indicaciones de seguridad y la normativa local.
+
+---
+
+
+
